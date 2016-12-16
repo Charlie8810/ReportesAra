@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ChartModule } from 'angular2-highcharts';
 
 import { Routing } from './app.routes';
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { MapaEmpresasComponent } from './pages/mapa-empresas/mapa-empresas.compo
     FormsModule,
     HttpModule,
     RouterModule,
-    Routing
+    Routing,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

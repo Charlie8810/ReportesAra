@@ -1,3 +1,166 @@
-<p>
-  pulso-diario works!
-</p>
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title"></div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End page title-->
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">
+   <div class="boxed">
+   <div class="row">
+        <div class="col-lg-12">
+            <div class="well well-sm">
+                &nbsp;
+                <span style="float:right;"><strong>*Datos actualizados al:</strong> <span id="Leyend_FechaActualizacion">Martes, 18 de Octubre de 2016</span></span>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span> Pulso Diario</span> - 
+                    <span id="Leyend_NombreMes">Diciembre</span>
+                </h3>
+            </div> 
+            <div class="panel-body">
+           
+
+              <div class="col-lg-12">
+                  <chart [options]="options" class="graficarlos col-lg-12"></chart>
+              </div>
+              <div class="clearfix"></div>
+              <br /><br /><br />
+              <div class="row" style="margin:auto">
+                  <div class="col-sm-3 col-lg-3">
+                      <div class="panel panel-primary panel-colorful" id="btnStats">
+                          <div class="pad-all">
+                              <span class="text-bold">Colocaciones Brutas M$</span>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idBrutoHoy">M$0</span>
+                                  Hoy
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idBrutoAnt">0</span>
+                                  Ayer
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idBrutoAcumulado">0</span>
+                                  Acumulado
+                              </p>
+                          </div>
+                          <div class="pad-all">
+                              <ul class="list-group list-unstyled">
+                                  <li class="mar-btm">
+                                      <span class="pull-right text-bold" id="progresBruta1">0%</span>
+                                      <p>Cumplimiento</p>
+                                      <div class="progress progress-md">
+                                          <div id="progresBruta" style="width: 0%;" class="progress-bar progress-bar-light">
+                                              <span class="sr-only">0%</span>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-lg-3">
+                      <div style="background:#8bc34a; color:#fff" id="btnStats1">
+                          <div class="pad-all">
+                              <span class="text-bold">Colocaciones Netas M$</span>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idNetoHoy">0</span>
+                                  Hoy
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idNetoAnt">0</span>
+                                  Ayer
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idNetoAcumulado">0</span>
+                                  Acumulado
+                              </p>
+                          </div>
+                          <div class="pad-all">
+                              <ul class="list-group list-unstyled">
+                                  <li class="mar-btm">
+                                      <span class="pull-right text-bold" id="progresNeta1">15%</span>
+                                      <p>Cumplimiento</p>
+                                      <div class="progress progress-md">
+                                          <div id="progresNeta" style="width: 0%;" class="progress-bar progress-bar-light">
+                                              <span class="sr-only">0%</span>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-2 col-lg-2">
+                      <div class="panel panel-purple panel-colorful" id="btnStats2">
+                          <div class="pad-all">
+                              <p class="text-bold">Tasa Promedio</p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idTasaHoy">0</span>
+                                  Hoy
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idTasaAyer">0</span>
+                                  Ayer
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idTasaAcumulado">0</span>
+                                  Acumulado
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-2 col-lg-2">
+                      <div class="panel panel-warning panel-colorful" id="btnStats3">
+                          <div class="pad-all">
+                              <p class="text-bold">Plazo Promedio</p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idPlazoHoy">0</span>
+                                  Hoy
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idPlazoAyer">0</span>
+                                  Ayer
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idPlazoAcumulado">0</span>
+                                  Acumulado
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-2 col-lg-2">
+                      <div class="panel media middle panel-colorful panel-pink" id="btnStats4">
+                          <div class="pad-all">
+                              <p class="text-bold">Spread</p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idSpreadHoy">0</span>
+                                  Hoy
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idSpreadAyer">0</span>
+                                  Ayer
+                              </p>
+                              <p class="mar-no">
+                                  <span class="pull-right text-bold" id="idSpreadAcumulado">0</span>
+                                  Acumulado
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+                                
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--===================================================-->
+<!--End page content-->
