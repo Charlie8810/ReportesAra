@@ -74,6 +74,8 @@ export class PulsoDiarioComponent implements OnInit {
                               presupuesto:[900000, 821429, 945857, 945857, 945857]
                             }
       );
+
   }
+
 
 }

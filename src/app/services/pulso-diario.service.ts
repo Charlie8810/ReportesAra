@@ -8,7 +8,7 @@ export class PulsoDiarioService {
 
   private headers = new Headers({
     'Accept': 'application/json, text/javascript, */*; q=0.01',
-    'Token':'',
+    'Token':'330fa83a-d679-4a3c-b860-a0e0f36814e8',
     'TokenExpiry':'900',
     'Access-Control-Expose-Headers':'Token,TokenExpiry'
   });
@@ -17,7 +17,7 @@ export class PulsoDiarioService {
   constructor (private http: Http) {}
 
   getColocacionesBrutas(): Observable<any[]> {
-    return this.http.get(this.serviceUrlBase + 'DirectorioDashboard', this.options)
+        return this.http.get(this.serviceUrlBase + 'DirectorioDashboard', this.options)
                     .map((res: Response) => res.json())
                     .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
